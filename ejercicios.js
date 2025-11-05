@@ -31,24 +31,25 @@ function miInformacion() {
  */
 function operacionesBasicas(a, b) {
   // TODO: Calcula suma, resta, multiplicaciÃ³n y divisiÃ³n de a y b
-  
-  const suma = 0;
-  const resta = 0;
-  const multiplicacion = 0;
-  const division = 0;
-  
+//ESTE TECLADO ES MUY CHINO NO ME GUSTA HOLA
+
+  const suma = b+a; 
+  const resta = a-b;
+  const multiplicacion = a*b;
+  const division = a/b;
   return { suma, resta, multiplicacion, division };
 }
 
 /**
  * Ejercicio 1.3: Ãrea de un rectÃ¡ngulo (2 puntos)
- * @param {number} base - Base del rectÃ¡ngulo
- * @param {number} altura - Altura del rectÃ¡ngulo
- * @returns {number} - Ãrea del rectÃ¡ngulo
+ * @param {10} base - Base del rectÃ¡ngulo
+ * @param {2} altura - Altura del rectÃ¡ngulo
+ * @returns {10} - Ãrea del rectÃ¡ngulo
  */
 function areaRectangulo(base, altura) {
   // TODO: Calcula y retorna el Ã¡rea (base * altura)
-  return 0;
+  
+  return base * altura;
 }
 
 /**
