@@ -262,6 +262,12 @@ if (numeros.length === 0) {
 function filtrarMayores(numeros, limite) {
   // TODO: Crea un nuevo array con solo los nÃºmeros mayores al lÃ­mite
   const mayores = [];
+for (let i = 0; i < numeros.length; i++) {
+    const numeroActual = numeros[i];
+    if (numeroActual > limite) {
+      mayores.push(numeroActual);
+    }
+  }
   return mayores;
 }
 
