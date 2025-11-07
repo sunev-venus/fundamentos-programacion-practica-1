@@ -1,38 +1,32 @@
-// FUNDAMENTOS DE PROGRAMACIÃ“N - PRÃCTICA
+// FUNDAMENTOS DE PROGRAMACIÓN - PRÁCTICA
 // Nombre del estudiante: _________________
 // Fecha: _________________
 
 // ============================================
-// SECCIÃ“N 1: VARIABLES Y TIPOS DE DATOS (10 puntos)
+// SECCIÓN 1: VARIABLES Y TIPOS DE DATOS (10 puntos)
 // ============================================
 
 /**
  * Ejercicio 1.1: Declarar variables (2 puntos)
- * Crea tres variables con tu informaciÃ³n personal
+ * Crea tres variables con tu información personal
  * @returns {Object} - Objeto con nombre, edad y carrera
  */
 function miInformacion() {
   // TODO: Declara las variables nombre, edad y carrera
-  // Ejemplo: const nombre = "Juan";
-  //hgj
-  
   const nombre = "Venus Getsemaní Semino Alemán";
   const edad = 18;
   const carrera = "TSU";
-  
   return { nombre, edad, carrera };
 }
 
 /**
- * Ejercicio 1.2: Operaciones aritmÃ©ticas bÃ¡sicas (3 puntos)
- * @param {number} a - Primer nÃºmero
- * @param {number} b - Segundo nÃºmero
- * @returns {Object} - Objeto con suma, resta, multiplicaciÃ³n y divisiÃ³n
+ * Ejercicio 1.2: Operaciones aritmeticas básicas (3 puntos)
+ * @param {number} a - Primer número
+ * @param {number} b - Segundo número
+ * @returns {Object} - Objeto con suma, resta, multiplicación y división
  */
 function operacionesBasicas(a, b) {
-  // TODO: Calcula suma, resta, multiplicaciÃ³n y divisiÃ³n de a y b
-//ESTE TECLADO ES MUY CHINO NO ME GUSTA HOLA
-
+  // TODO: Calcula suma, resta, multiplicación y división de a y b
   const suma = b+a; 
   const resta = a-b;
   const multiplicacion = a*b;
@@ -41,26 +35,25 @@ function operacionesBasicas(a, b) {
 }
 
 /**
- * Ejercicio 1.3: Ãrea de un rectÃ¡ngulo (2 puntos)
- * @param {10} base - Base del rectÃ¡ngulo
- * @param {2} altura - Altura del rectÃ¡ngulo
- * @returns {10} - Ãrea del rectÃ¡ngulo
+ * Ejercicio 1.3: área de un rectángulo (2 puntos)
+ * @param {10} base - Base del rectánguloo
+ * @param {2} altura - Altura del rectángulo
+ * @returns {10} - Área del rectángulo
  */
 function areaRectangulo(base, altura) {
-  // TODO: Calcula y retorna el Ã¡rea (base * altura)
-  
+  // TODO: Calcula y retorna el área (base * altura)
   return base * altura;
 }
 
 /**
- * Ejercicio 1.4: ConversiÃ³n de temperatura (3 puntos)
+ * Ejercicio 1.4: Conversión de temperatura (3 puntos)
  * Convierte grados Celsius a Fahrenheit
- * FÃ³rmula: F = C * 9/5 + 32
+ * Fórmula: F = C * 9/5 + 32
  * @param {number} celsius - Temperatura en Celsius
  * @returns {number} - Temperatura en Fahrenheit
  */
 function celsiusAFahrenheit(celsius) {
-  // TODO: Implementa la conversiÃ³n
+  // TODO: Implementación la conversión
   return celsius * 9/5 + 32;
 }
 
@@ -224,14 +217,15 @@ let suma = 0;
  */
 function promedioArray(numeros) {
   // TODO: Calcula el promedio (suma total / cantidad de elementos)
-  let suma = 0;
-  for (let i = 0; i < numeros.length; i++) {
-    suma += numeros[i];
-  }
-  const cantidad = numeros.length;
-  if (cantidad === 0) {
-    return 0;
-  }
+ let suma = 0;
+  for (let i = 0; i < numeros.length; i++) {
+    suma += numeros[i];
+  }
+  const cantidad = numeros.length;
+  if (cantidad === 0) {
+    return 0;
+  }
+  return suma / cantidad; 
 }
 
 /**
@@ -243,13 +237,16 @@ function encontrarMaximo(numeros) {
   // TODO: Encuentra y retorna el nÃºmero mÃ¡s grande
   // Pista: Puedes usar Math.max(...numeros) o hacerlo con un bucle
 if (numeros.length === 0) {
-    return undefined;
+    return undefined;
+  }
+  let maximo = numeros[0]; 
+  for (let i = 1; i < numeros.length; i++) {
+    if (numeros[i] > maximo) {
+      maximo = numeros[i];
+    }
   }
-  let maximo = numeros[0]; 
-  for (let i = 1; i < numeros.length; i++) {
-    if (numeros[i] > maximo) {
-      maximo = numeros[i];
-    }
+  return maximo; 
+}
 }
 
 /**
