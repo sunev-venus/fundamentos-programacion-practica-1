@@ -107,15 +107,12 @@ function evaluarNota(nota) {
  */
 function mayorDeTres(a, b, c) {
   // TODO: Encuentra y retorna el mayor de los tres nÃºmeros
-  if (edad < 18) {
-    // Si la edad es menor de 18 (rango 0-17)
-    return "menor";
-  } else if (edad < 65) {
-    // Si la edad NO fue menor de 18 Y es menor de 65 (rango 18-64)
-    return "adulto";
+  if (a >= b && a >= c) {
+    return a;
+  } else if (b >= a && b >= c) {
+    return b;
   } else {
-    // Si la edad NO fue menor de 65 (rango 65+)
-    return "mayor"; 
+    return c;
   }
 }
 
