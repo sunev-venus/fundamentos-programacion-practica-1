@@ -94,7 +94,7 @@ function evaluarNota(nota) {
    if (nota >= 60) {
       return "Aprobado";
     } else {
-      return "Reprobado";
+      return "Reprobado ";
     }
 }
 
