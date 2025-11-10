@@ -298,8 +298,14 @@ for (let i = arr.length - 1; i >= 0; i--) {
  * Ejemplo: crearMatriz(2, 3) debe retornar [[0, 0, 0], [0, 0, 0]]
  */
 function crearMatriz(filas, columnas) {
-  // TODO: Crea una matriz de filas x columnas llena de ceros
   const matriz = [];
+  for (let i = 0; i < filas; i++) {
+    const fila = []; 
+    for (let j = 0; j < columnas; j++) {
+      fila.push(0);
+    }
+    matriz.push(fila);
+  }
   return matriz;
 }
 
@@ -310,9 +316,13 @@ function crearMatriz(filas, columnas) {
  * Ejemplo: sumaMatriz([[1, 2], [3, 4]]) debe retornar 10
  */
 function sumaMatriz(matriz) {
-  // TODO: Suma todos los elementos de la matriz
-  // NecesitarÃ¡s dos bucles: uno para las filas y otro para las columnas
-  return 0;
+  let suma = 0;
+  for (let i = 0; i < matriz.length; i++) {
+    for (let j = 0; j < matriz[i].length; j++) {
+      suma += matriz[i][j];
+    }
+  }
+  return suma;
 }
 
 /**
