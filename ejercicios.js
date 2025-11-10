@@ -360,8 +360,19 @@ function obtenerColumna(matriz, indiceColumna) {
  * Ejemplo: transponer([[1, 2, 3], [4, 5, 6]]) debe retornar [[1, 4], [2, 5], [3, 6]]
  */
 function transponer(matriz) {
-  // TODO: Crea la matriz transpuesta
+  if (matriz.length === 0) {
+    return [];
+  }
+  const filasOriginales = matriz.length;
+  const columnasOriginales = matriz[0].length;
   const transpuesta = [];
+  for (let j = 0; j < columnasOriginales; j++) {
+    const nuevaFila = [];
+    for (let i = 0; i < filasOriginales; i++) {
+      nuevaFila.push(matriz[i][j]);
+    }
+    transpuesta.push(nuevaFila);
+  }
   return transpuesta;
 }
 
