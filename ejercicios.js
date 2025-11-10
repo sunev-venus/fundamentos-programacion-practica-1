@@ -247,7 +247,7 @@ if (numeros.length === 0) {
   }
   return maximo; 
 }
-}
+
 
 /**
  * Ejercicio 4.4: Filtrar nÃºmeros mayores a un valor (5 puntos)
