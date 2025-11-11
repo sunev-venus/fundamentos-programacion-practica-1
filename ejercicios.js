@@ -302,12 +302,12 @@ for (let i = arr.length - 1; i >= 0; i--) { // Recorro el array desde el final
  */
 function crearMatriz(filas, columnas) {
   const matriz = [];
-  for (let i = 0; i < filas; i++) {
-    const fila = []; 
-    for (let j = 0; j < columnas; j++) {
-      fila.push(0);
+  for (let i = 0; i < filas; i++) { // Recorro las filas
+    const fila = [];
+    for (let j = 0; j < columnas; j++) { // Recorro las columnas
+      fila.push(0); // Agrego ceros en cada posición
     }
-    matriz.push(fila);
+    matriz.push(fila); // Agrego la fila a la matriz
   }
   return matriz;
 }
@@ -320,9 +320,9 @@ function crearMatriz(filas, columnas) {
  */
 function sumaMatriz(matriz) {
   let suma = 0;
-  for (let i = 0; i < matriz.length; i++) {
-    for (let j = 0; j < matriz[i].length; j++) {
-      suma += matriz[i][j];
+  for (let i = 0; i < matriz.length; i++) { // Recorro las filas
+    for (let j = 0; j < matriz[i].length; j++) { // Recorro las columnas
+      suma += matriz[i][j]; // Acumulo cada valor
     }
   }
   return suma;
@@ -337,7 +337,7 @@ function sumaMatriz(matriz) {
  */
 function obtenerFila(matriz, indiceFila) {
   // TODO: Retorna la fila indicada
-  return matriz[indiceFila];
+  return matriz[indiceFila]; // Retorno la fila pedida
 }
 
 /**
@@ -349,8 +349,8 @@ function obtenerFila(matriz, indiceFila) {
  */
 function obtenerColumna(matriz, indiceColumna) {
   const columna = [];
-  for (let i = 0; i < matriz.length; i++) {
-    columna.push(matriz[i][indiceColumna]);
+  for (let i = 0; i < matriz.length; i++) { // Recorro todas las filas
+    columna.push(matriz[i][indiceColumna]); // Extraigo el valor de la columna
   }
   return columna;
 }
@@ -364,17 +364,17 @@ function obtenerColumna(matriz, indiceColumna) {
  */
 function transponer(matriz) {
   if (matriz.length === 0) {
-    return [];
+   return []; // Si la matriz está vacía, retorno una vacía
   }
-  const filasOriginales = matriz.length;
-  const columnasOriginales = matriz[0].length;
+  const filasOriginales = matriz.length; // Cantidad de filas
+  const columnasOriginales = matriz[0].length; // Cantidad de columnas
   const transpuesta = [];
-  for (let j = 0; j < columnasOriginales; j++) {
+  for (let j = 0; j < columnasOriginales; j++) { // Recorro columnas
     const nuevaFila = [];
-    for (let i = 0; i < filasOriginales; i++) {
-      nuevaFila.push(matriz[i][j]);
+    for (let i = 0; i < filasOriginales; i++) { // Recorro filas
+      nuevaFila.push(matriz[i][j]); // Intercambio posición
     }
-    transpuesta.push(nuevaFila);
+    transpuesta.push(nuevaFila); // Agrego la nueva fila transpuesta
   }
   return transpuesta;
 }
