@@ -140,11 +140,11 @@ function clasificarEdad(edad) {
  * @returns {number} - Factorial de n
  */
 function factorial(n) {
-  let resultado = 1;
-  for (let i = 1; i <= n; i++) {
-    resultado *= i;
+  let resultado = 1; // Inicializo el resultado en 1
+  for (let i = 1; i <= n; i++) { // Recorro desde 1 hasta n
+    resultado *= i; // Multiplico acumulativamente
   }
-  return resultado;
+  return resultado; // Devuelvo el resultado final
 }
 
 /**
@@ -154,11 +154,11 @@ function factorial(n) {
  */
 function sumaHastaN(n) {
   // TODO: Usa un bucle para sumar todos los nÃºmeros desde 1 hasta n
-  let suma = 0;
-  for (let i = 1; i <= n; i++) {
-    suma += i;
+  let suma = 0; // Variable acumuladora
+  for (let i = 1; i <= n; i++) { // Bucle desde 1 hasta n
+    suma += i; // Acumulo la suma
   }
-  return suma;
+  return suma; // Devuelvo la suma total
 }
 
 /**
@@ -168,14 +168,14 @@ function sumaHastaN(n) {
  * Ejemplo: tablaMultiplicar(3) debe retornar [3, 6, 9, 12, 15, 18, 21, 24, 27, 30]
  */
 function tablaMultiplicar(numero) {
-  const tabla = [];
-
+ const tabla = []; // Array vacío para guardar los resultados
+  
   // TODO: Genera un array con la tabla de multiplicar
-  for (let i = 1; i <= 10; i++) {
-    const resultado = numero * i;
-    tabla.push(resultado);
+  for (let i = 1; i <= 10; i++) { // Recorro del 1 al 10
+    const resultado = numero * i; // Calculo la multiplicación
+    tabla.push(resultado); // Guardo el resultado en el array
   }
-  return tabla;
+  return tabla; // Devuelvo la tabla completa
 }
 
 /**
@@ -186,13 +186,13 @@ function tablaMultiplicar(numero) {
  */
 function numerosPares(n) {
   // TODO: Crea un array con todos los nÃºmeros pares hasta n
-const pares = [];
+const pares = []; // Array para guardar los pares
   for (let i = 2; i <= n; i++) {
-    if (i % 2 === 0) {
-      pares.push(i);
+    if (i % 2 === 0) { // Si el número es divisible entre 2
+      pares.push(i); // Lo agrego al array
     }
   }
-  return pares;
+  return pares; // Devuelvo el array con los pares
 }
 
 // ============================================
