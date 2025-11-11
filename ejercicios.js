@@ -207,8 +207,8 @@ const pares = []; // Array para guardar los pares
 function sumaArray(numeros) {
   // TODO: Suma todos los elementos del array
 let suma = 0;
-  for (let i = 0; i < numeros.length; i++) {
-    suma += numeros[i];
+  for (let i = 0; i < numeros.length; i++) { // Recorro cada posición del array
+    suma += numeros[i]; // Acumulo el valor actual
   }
   return suma;
 }
@@ -221,14 +221,14 @@ let suma = 0;
 function promedioArray(numeros) {
   // TODO: Calcula el promedio (suma total / cantidad de elementos)
  let suma = 0;
-  for (let i = 0; i < numeros.length; i++) {
-    suma += numeros[i];
-  }
-  const cantidad = numeros.length;
-  if (cantidad === 0) {
-    return 0;
-  }
-  return suma / cantidad; 
+  for (let i = 0; i < numeros.length; i++) {
+    suma += numeros[i]; // Acumulo cada elemento
+  }
+  const cantidad = numeros.length; // Guardo el total de elementos
+  if (cantidad === 0) { // Evito división entre cero
+    return 0;
+  }
+  return suma / cantidad; // Retorno el promedio
 }
 
 /**
@@ -240,15 +240,15 @@ function encontrarMaximo(numeros) {
   // TODO: Encuentra y retorna el nÃºmero mÃ¡s grande
   // Pista: Puedes usar Math.max(...numeros) o hacerlo con un bucle
 if (numeros.length === 0) {
-    return undefined;
-  }
-  let maximo = numeros[0]; 
-  for (let i = 1; i < numeros.length; i++) {
-    if (numeros[i] > maximo) {
-      maximo = numeros[i];
-    }
+    return undefined; // Si el array está vacío, no hay máximo
   }
-  return maximo; 
+  let maximo = numeros[0]; // Inicio con el primer número
+  for (let i = 1; i < numeros.length; i++) {
+    if (numeros[i] > maximo) { // Comparo con el máximo actual
+      maximo = numeros[i]; // Actualizo si encuentro uno mayor
+    }
+  }
+  return maximo; // Devuelvo el número mayor
 }
 
 
@@ -261,11 +261,11 @@ if (numeros.length === 0) {
  */
 function filtrarMayores(numeros, limite) {
   // TODO: Crea un nuevo array con solo los nÃºmeros mayores al lÃ­mite
-  const mayores = [];
-for (let i = 0; i < numeros.length; i++) {
+  const mayores = []; // Array donde guardo los números filtrados
+  for (let i = 0; i < numeros.length; i++) {
     const numeroActual = numeros[i];
-    if (numeroActual > limite) {
-      mayores.push(numeroActual);
+    if (numeroActual > limite) { // Si es mayor que el límite
+      mayores.push(numeroActual); // Lo agrego al nuevo array
     }
   }
   return mayores;
@@ -281,8 +281,8 @@ function invertirArray(arr) {
   // TODO: Invierte el orden de los elementos
   // Pista: Puedes usar arr.reverse() o hacerlo manualmente
   const invertido = [];
-for (let i = arr.length - 1; i >= 0; i--) {
-    invertido.push(arr[i]);
+for (let i = arr.length - 1; i >= 0; i--) { // Recorro el array desde el final
+    invertido.push(arr[i]); // Agrego los elementos en orden contrario
   }
   return invertido;
 }
