@@ -27,10 +27,10 @@ function miInformacion() {
  */
 function operacionesBasicas(a, b) {
   // TODO: Calcula suma, resta, multiplicación y división de a y b
-  const suma = b+a; 
-  const resta = a-b;
-  const multiplicacion = a*b;
-  const division = a/b;
+  const suma = b + a; // Sumo los dos números
+  const resta = a - b; // Resto el segundo al primero
+  const multiplicacion = a * b; // Multiplico ambos números
+  const division = a / b; // Divido el primero entre el segundo
   return { suma, resta, multiplicacion, division };
 }
 
@@ -42,7 +42,7 @@ function operacionesBasicas(a, b) {
  */
 function areaRectangulo(base, altura) {
   // TODO: Calcula y retorna el área (base * altura)
-  return base * altura;
+  return base * altura;  // Multiplico base por altura y retorno el resultado
 }
 
 /**
@@ -54,7 +54,7 @@ function areaRectangulo(base, altura) {
  */
 function celsiusAFahrenheit(celsius) {
   // TODO: Implementación la conversión
-  return celsius * 9/5 + 32;
+  return celsius * 9/5 + 32; // Aplico la fórmula de conversión
 }
 
 // ============================================
@@ -69,9 +69,9 @@ function celsiusAFahrenheit(celsius) {
 function parOImpar(numero) {
   // TODO: Usa el operador % (mÃ³dulo) para determinar si es par o impar
   // Pista: Un nÃºmero es par si numero % 2 === 0
-  if ( numero % 2 === 0) {
+  if ( numero % 2 === 0) { // Si el residuo al dividir entre 2 es 0, es par
     return "par";
-  } else {
+  } else { // Si no, es impar
     return "impar";
   }
 
@@ -85,9 +85,9 @@ function parOImpar(numero) {
 function evaluarNota(nota) {
   // TODO: Implementa la lÃ³gica con if/else
    if (nota >= 60) {
-      return "Aprobado";
+      return "Aprobado"; // Cumple con el mínimo para aprobar
     } else {
-      return "Reprobado";
+      return "Reprobado"; // No alcanza la nota mínima
     }
 }
 
@@ -101,11 +101,11 @@ function evaluarNota(nota) {
 function mayorDeTres(a, b, c) {
   // TODO: Encuentra y retorna el mayor de los tres nÃºmeros
   if (a >= b && a >= c) {
-    return a;
+    return a; // a es el más grande
   } else if (b >= a && b >= c) {
-    return b;
+    return b; // b es el más grande
   } else {
-    return c;
+    return c; // c es el más grande
   }
 }
 
@@ -115,7 +115,10 @@ function mayorDeTres(a, b, c) {
  * @returns {string} - "menor" (0-17), "adulto" (18-64), "mayor" (65+)
  */
 function clasificarEdad(edad) {
-  // TODO: Implementa la clasificaciÃ³n con if/else if/else
+  /**
+ * Clasifico una persona según su edad en tres grupos:
+ * menor (0–17), adulto (18–64) y mayor (65 o más).
+ */
   if (edad < 18) {
     return "menor";
   } else if (edad < 65) {
